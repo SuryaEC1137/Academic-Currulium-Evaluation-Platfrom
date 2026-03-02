@@ -1,0 +1,325 @@
+[2026-02-19T10:43:51.086Z] [Auth Debug] Login attempt for: gokul.cs23@bitsathy.ac.in
+[2026-02-19T10:43:51.109Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-19T10:43:51.132Z] [Auth Debug] User lookup result: Found
+[2026-02-19T10:43:51.370Z] [Auth Debug] Password matched for: gokul.cs23@bitsathy.ac.in
+[2026-02-19T10:43:51.373Z] [Auth Debug] Starting gamification logic...
+[2026-02-19T10:43:51.398Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-19T10:43:51.405Z] [Auth Debug] Logging audit...
+[2026-02-19T10:43:51.447Z] [Auth Debug] Sending response...
+[2026-02-19T10:44:29.703Z] [Auth Debug] Login attempt for: one@bitsathy.ac.in
+[2026-02-19T10:44:29.709Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-19T10:44:29.717Z] [Auth Debug] User lookup result: Found
+[2026-02-19T10:44:29.932Z] [Auth Debug] Password matched for: one@bitsathy.ac.in
+[2026-02-19T10:44:29.936Z] [Auth Debug] Starting gamification logic...
+[2026-02-19T10:44:29.958Z] [Auth Debug] Streak updated and saved. AwardXP: true
+[2026-02-19T10:44:29.980Z] [Auth Debug] Logging audit...
+[2026-02-19T10:44:29.995Z] [Auth Debug] Sending response...
+[2026-02-19T16:35:50.752Z] [Auth Debug] Login attempt for: cheran.it23@bitsathy.ac.in
+[2026-02-19T16:35:50.769Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-19T16:35:50.809Z] [Auth Debug] User lookup result: Found
+[2026-02-19T16:35:51.077Z] [Auth Debug] Password matched for: cheran.it23@bitsathy.ac.in
+[2026-02-19T16:35:51.082Z] [Auth Debug] Starting gamification logic...
+[2026-02-19T16:35:51.113Z] [Auth Debug] Streak updated and saved. AwardXP: true
+[2026-02-19T16:35:51.147Z] [Auth Debug] Logging audit...
+[2026-02-19T16:35:51.205Z] [Auth Debug] Sending response...
+[2026-02-20T03:21:48.389Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T03:21:48.397Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T03:21:48.403Z] [Auth Debug] User lookup result: Found
+[2026-02-20T03:21:48.529Z] [Auth Debug] Password matched for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T03:21:48.532Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T03:21:48.545Z] [Auth Debug] Streak updated and saved. AwardXP: true
+[2026-02-20T03:21:48.557Z] [Auth Debug] Logging audit...
+[2026-02-20T03:21:48.564Z] [Auth Debug] Sending response...
+[2026-02-20T03:50:28.610Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T03:50:28.624Z] [Auth Debug] Admin lookup result: Found
+[2026-02-20T03:50:29.188Z] [Auth Debug] Password matched for: cheran@it23
+[2026-02-20T03:50:29.198Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T03:50:29.204Z] [Auth Debug] Skipping gamification for Admin role.
+[2026-02-20T03:50:29.218Z] [Auth Debug] Logging audit...
+[2026-02-20T03:50:29.371Z] [Auth Debug] Sending response...
+[2026-02-20T04:16:54.559Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T04:16:56.476Z] [Auth Debug] Admin lookup result: Found
+[2026-02-20T04:16:56.987Z] [Auth Debug] Password matched for: cheran@it23
+[2026-02-20T04:16:56.993Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T04:16:56.997Z] [Auth Debug] Skipping gamification for Admin role.
+[2026-02-20T04:16:57.009Z] [Auth Debug] Logging audit...
+[2026-02-20T04:16:57.779Z] [Auth Debug] Sending response...
+[2026-02-20T04:28:01.809Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T04:28:01.905Z] [Auth Debug] Admin lookup result: Found
+[2026-02-20T04:28:02.449Z] [Auth Debug] Password matched for: cheran@it23
+[2026-02-20T04:28:02.454Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T04:28:02.457Z] [Auth Debug] Skipping gamification for Admin role.
+[2026-02-20T04:28:02.465Z] [Auth Debug] Logging audit...
+[2026-02-20T04:28:02.983Z] [Auth Debug] Sending response...
+[2026-02-20T05:32:47.415Z] [Auth Debug] Login attempt for: cheran.it23@bitsathy.ac.in
+[2026-02-20T05:32:47.494Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T05:32:47.556Z] [Auth Debug] User lookup result: Found
+[2026-02-20T05:32:47.758Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T05:32:50.123Z] [Auth Debug] Login attempt for: cheran.it23@bitsathy.ac.in
+[2026-02-20T05:32:50.211Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T05:32:50.271Z] [Auth Debug] User lookup result: Found
+[2026-02-20T05:32:50.481Z] [Auth Debug] Password matched for: cheran.it23@bitsathy.ac.in
+[2026-02-20T05:32:50.485Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T05:32:50.596Z] [Auth Debug] Streak updated and saved. AwardXP: true
+[2026-02-20T05:32:50.755Z] [Auth Debug] Logging audit...
+[2026-02-20T05:32:50.850Z] [Auth Debug] Sending response...
+[2026-02-20T06:13:16.287Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T06:13:16.362Z] [Auth Debug] Admin lookup result: Found
+[2026-02-20T06:13:16.737Z] [Auth Debug] Password matched for: cheran@it23
+[2026-02-20T06:13:16.758Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T06:13:16.787Z] [Auth Debug] Skipping gamification for Admin role.
+[2026-02-20T06:13:16.800Z] [Auth Debug] Logging audit...
+[2026-02-20T06:13:16.914Z] [Auth Debug] Sending response...
+[2026-02-20T06:29:09.212Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T06:29:09.273Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T06:29:09.326Z] [Auth Debug] User lookup result: Found
+[2026-02-20T06:29:09.652Z] [Auth Debug] Password matched for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T06:29:09.659Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T06:29:09.741Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-20T06:29:09.744Z] [Auth Debug] Logging audit...
+[2026-02-20T06:29:09.833Z] [Auth Debug] Sending response...
+[2026-02-20T10:08:43.390Z] [Auth Debug] Login attempt for: cheran.it23@bitsathy.ac.in
+[2026-02-20T10:08:44.248Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T10:08:44.610Z] [Auth Debug] User lookup result: Found
+[2026-02-20T10:08:47.118Z] [Auth Debug] Password matched for: cheran.it23@bitsathy.ac.in
+[2026-02-20T10:08:47.146Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T10:08:47.324Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-20T10:08:47.360Z] [Auth Debug] Logging audit...
+[2026-02-20T10:08:47.609Z] [Auth Debug] Sending response...
+[2026-02-20T10:09:10.235Z] [Auth Debug] Login attempt for: cheran.it23@bitsathy.ac.in
+[2026-02-20T10:09:10.305Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T10:09:10.375Z] [Auth Debug] User lookup result: Found
+[2026-02-20T10:09:10.618Z] [Auth Debug] Password matched for: cheran.it23@bitsathy.ac.in
+[2026-02-20T10:09:10.623Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T10:09:10.696Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-20T10:09:10.704Z] [Auth Debug] Logging audit...
+[2026-02-20T10:09:10.777Z] [Auth Debug] Sending response...
+[2026-02-20T10:24:59.231Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T10:24:59.294Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T10:24:59.363Z] [Auth Debug] User lookup result: Found
+[2026-02-20T10:24:59.564Z] [Auth Debug] Password matched for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T10:24:59.570Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T10:24:59.655Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-20T10:24:59.659Z] [Auth Debug] Logging audit...
+[2026-02-20T10:24:59.755Z] [Auth Debug] Sending response...
+[2026-02-20T13:06:21.321Z] [Auth Debug] Login attempt for: surya@ec23
+[2026-02-20T13:06:21.336Z] [Auth Debug] Admin lookup result: Found
+[2026-02-20T13:06:21.894Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T13:06:29.484Z] [Auth Debug] Login attempt for: surya@ec23
+[2026-02-20T13:06:29.514Z] [Auth Debug] Admin lookup result: Found
+[2026-02-20T13:06:30.091Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T13:07:45.279Z] [Auth Debug] Login attempt for: surya@ec23
+[2026-02-20T13:07:45.307Z] [Auth Debug] Admin lookup result: Found
+[2026-02-20T13:07:45.697Z] [Auth Debug] Password matched for: surya@ec23
+[2026-02-20T13:07:45.705Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T13:07:45.711Z] [Auth Debug] Skipping gamification for Admin role.
+[2026-02-20T13:07:45.719Z] [Auth Debug] Logging audit...
+[2026-02-20T13:07:45.816Z] [Auth Debug] Sending response...
+[2026-02-20T14:16:16.721Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T14:16:16.789Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:16:16.814Z] [Auth Debug] User lookup result: Found
+[2026-02-20T14:16:17.105Z] [Auth Debug] Password matched for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T14:16:17.118Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T14:16:17.142Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-20T14:16:17.150Z] [Auth Debug] Logging audit...
+[2026-02-20T14:16:17.180Z] [Auth Debug] Sending response...
+[2026-02-20T14:20:21.852Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T14:20:21.870Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:20:21.892Z] [Auth Debug] User lookup result: Found
+[2026-02-20T14:20:22.135Z] [Auth Debug] Password matched for: naveena.faculty@bitsathy.ac.in
+[2026-02-20T14:20:22.144Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T14:20:22.158Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-20T14:20:22.165Z] [Auth Debug] Logging audit...
+[2026-02-20T14:20:22.185Z] [Auth Debug] Sending response...
+[2026-02-20T14:22:57.456Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T14:22:57.485Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:22:57.497Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:22:57.500Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:23:41.692Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T14:23:41.724Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:23:41.746Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:23:41.779Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:23:43.268Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T14:23:43.292Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:23:43.316Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:23:43.323Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:23:43.522Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T14:23:43.535Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:23:43.548Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:23:43.553Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:23:43.684Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T14:23:43.695Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:23:43.716Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:23:43.724Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:23:43.883Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T14:23:43.895Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:23:43.911Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:23:43.914Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:23:44.059Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T14:23:44.073Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:23:44.087Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:23:44.093Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:23:44.268Z] [Auth Debug] Login attempt for: cheran@it23
+[2026-02-20T14:23:44.286Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:23:44.302Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:23:44.308Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:25:13.416Z] [Auth Debug] Login attempt for: surya@23
+[2026-02-20T14:25:13.448Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:25:13.484Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:25:13.501Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:25:14.504Z] [Auth Debug] Login attempt for: surya@23
+[2026-02-20T14:25:14.526Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-20T14:25:14.534Z] [Auth Debug] User lookup result: Not Found
+[2026-02-20T14:25:14.537Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-20T14:25:30.571Z] [Auth Debug] Login attempt for: surya@ec23
+[2026-02-20T14:25:30.590Z] [Auth Debug] Admin lookup result: Found
+[2026-02-20T14:25:30.878Z] [Auth Debug] Password matched for: surya@ec23
+[2026-02-20T14:25:30.883Z] [Auth Debug] Starting gamification logic...
+[2026-02-20T14:25:30.887Z] [Auth Debug] Skipping gamification for Admin role.
+[2026-02-20T14:25:30.889Z] [Auth Debug] Logging audit...
+[2026-02-20T14:25:30.898Z] [Auth Debug] Sending response...
+[2026-02-25T14:48:58.602Z] [Auth Debug] Login attempt for: surya@ec23
+[2026-02-25T14:48:58.614Z] [Auth Debug] Admin lookup result: Found
+[2026-02-25T14:48:58.913Z] [Auth Debug] Password matched for: surya@ec23
+[2026-02-25T14:48:58.919Z] [Auth Debug] Starting gamification logic...
+[2026-02-25T14:48:58.926Z] [Auth Debug] Skipping gamification for Admin role.
+[2026-02-25T14:48:58.932Z] [Auth Debug] Logging audit...
+[2026-02-25T14:48:59.091Z] [Auth Debug] Sending response...
+[2026-02-27T04:13:15.415Z] [Auth Debug] Login attempt for: surya.ec23@bitsathy.ac.in
+[2026-02-27T04:13:15.435Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:13:15.455Z] [Auth Debug] User lookup result: Found
+[2026-02-27T04:13:15.714Z] [Auth Debug] Password matched for: surya.ec23@bitsathy.ac.in
+[2026-02-27T04:13:15.722Z] [Auth Debug] Starting gamification logic...
+[2026-02-27T04:13:15.742Z] [Auth Debug] Streak updated and saved. AwardXP: true
+[2026-02-27T04:13:15.779Z] [Auth Debug] Logging audit...
+[2026-02-27T04:13:15.801Z] [Auth Debug] Sending response...
+[2026-02-27T04:13:40.619Z] [Auth Debug] Login attempt for: surya.ec23@bitsathy.ac.in
+[2026-02-27T04:13:40.659Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:13:40.677Z] [Auth Debug] User lookup result: Found
+[2026-02-27T04:13:40.917Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:14:09.209Z] [Auth Debug] Login attempt for: surya@ec23
+[2026-02-27T04:14:09.246Z] [Auth Debug] Admin lookup result: Found
+[2026-02-27T04:14:09.505Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:14:13.636Z] [Auth Debug] Login attempt for: surya@ec23
+[2026-02-27T04:14:13.685Z] [Auth Debug] Admin lookup result: Found
+[2026-02-27T04:14:13.930Z] [Auth Debug] Password matched for: surya@ec23
+[2026-02-27T04:14:13.942Z] [Auth Debug] Starting gamification logic...
+[2026-02-27T04:14:13.947Z] [Auth Debug] Skipping gamification for Admin role.
+[2026-02-27T04:14:13.953Z] [Auth Debug] Logging audit...
+[2026-02-27T04:14:13.992Z] [Auth Debug] Sending response...
+[2026-02-27T04:17:21.533Z] [Auth Debug] Login attempt for: deepa.ec@bitsathy.ac.in
+[2026-02-27T04:17:21.559Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:17:21.598Z] [Auth Debug] User lookup result: Found
+[2026-02-27T04:17:21.836Z] [Auth Debug] Password matched for: deepa.ec@bitsathy.ac.in
+[2026-02-27T04:17:21.843Z] [Auth Debug] Starting gamification logic...
+[2026-02-27T04:17:21.867Z] [Auth Debug] Streak updated and saved. AwardXP: true
+[2026-02-27T04:17:21.895Z] [Auth Debug] Logging audit...
+[2026-02-27T04:17:21.938Z] [Auth Debug] Sending response...
+[2026-02-27T04:19:42.211Z] [Auth Debug] Login attempt for: surya.ec@bitsathy.ac.in
+[2026-02-27T04:19:42.218Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:19:42.224Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:19:42.230Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:25.607Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:25.626Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:25.646Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:25.649Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:27.502Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:27.522Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:27.537Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:27.543Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:30.679Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:30.693Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:30.712Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:30.717Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:31.454Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:31.469Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:31.485Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:31.489Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:31.868Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:31.886Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:31.913Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:31.919Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:32.115Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:32.149Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:32.166Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:32.179Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:32.364Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:32.393Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:32.414Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:32.421Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:32.608Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:32.623Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:32.630Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:32.632Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:33.068Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:33.082Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:33.101Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:33.109Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:33.317Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:33.338Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:33.362Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:33.371Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:33.720Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:33.744Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:33.773Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:33.780Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:25:34.229Z] [Auth Debug] Login attempt for: naveena.faculty@bitsathy.ac.in
+[2026-02-27T04:25:34.252Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:25:34.277Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:25:34.285Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:09.673Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:09.688Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:09.719Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:09.725Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:22.705Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:22.723Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:22.751Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:22.759Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:23.889Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:23.896Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:23.918Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:23.923Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:24.439Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:24.453Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:24.470Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:24.480Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:24.655Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:24.678Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:24.707Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:24.713Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:24.876Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:24.890Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:24.897Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:24.900Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:25.073Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:25.088Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:25.109Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:25.117Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:31.551Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:31.568Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:31.586Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:31.600Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:32.210Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:32.239Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:32.267Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:32.276Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:32.436Z] [Auth Debug] Login attempt for: deeepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:32.443Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:32.472Z] [Auth Debug] User lookup result: Not Found
+[2026-02-27T04:26:32.482Z] [Auth Debug] login failed: Invalid email or password
+[2026-02-27T04:26:35.987Z] [Auth Debug] Login attempt for: deepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:36.015Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:26:36.050Z] [Auth Debug] User lookup result: Found
+[2026-02-27T04:26:36.322Z] [Auth Debug] Password matched for: deepa.ec@bitsathy.ac.in
+[2026-02-27T04:26:36.328Z] [Auth Debug] Starting gamification logic...
+[2026-02-27T04:26:36.346Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-27T04:26:36.359Z] [Auth Debug] Logging audit...
+[2026-02-27T04:26:36.372Z] [Auth Debug] Sending response...
+[2026-02-27T04:27:39.354Z] [Auth Debug] Login attempt for: surya.ec23@bitsathy.ac.in
+[2026-02-27T04:27:39.373Z] [Auth Debug] Admin lookup result: Not Found
+[2026-02-27T04:27:39.391Z] [Auth Debug] User lookup result: Found
+[2026-02-27T04:27:39.676Z] [Auth Debug] Password matched for: surya.ec23@bitsathy.ac.in
+[2026-02-27T04:27:39.683Z] [Auth Debug] Starting gamification logic...
+[2026-02-27T04:27:39.703Z] [Auth Debug] Streak updated and saved. AwardXP: false
+[2026-02-27T04:27:39.710Z] [Auth Debug] Logging audit...
+[2026-02-27T04:27:39.729Z] [Auth Debug] Sending response...
