@@ -1,7 +1,7 @@
 {
-  "name": "pro-academic-analytics-server",
+  "name": "academic-curriculum-evaluation-server",
   "version": "1.0.0",
-  "description": "Backend services for ProAcademic Analytics.",
+  "description": "Backend services for Academic Curriculum Evaluation.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

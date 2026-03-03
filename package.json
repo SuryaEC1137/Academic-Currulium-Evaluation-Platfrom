@@ -1,7 +1,7 @@
 {
-    "name": "pro-academic-analytics",
+    "name": "academic-curriculum-evaluation",
     "version": "1.0.0",
-    "description": "A comprehensive platform for academic analytics and course difficulty prediction.",
+    "description": "A comprehensive platform for academic curriculum evaluation and analytics.",
     "scripts": {
         "start": "npm start --prefix server",
         "server": "npm run dev --prefix server",

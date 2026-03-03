@@ -35,7 +35,7 @@ const LandingPage = () => {
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur-md mb-8 hover:bg-white/60 dark:hover:bg-white/10 transition cursor-default shadow-sm"
                     >
                         <SparklesIcon className="w-4 h-4 text-amber-500" />
-                        <span className="text-sm font-bold tracking-wide text-slate-600 dark:text-gray-300">BIT Sathy — Smart Academic Analytics</span>
+                        <span className="text-sm font-bold tracking-wide text-slate-600 dark:text-gray-300">BIT Sathy — Academic Curriculum Evaluation</span>
                     </motion.div>
 
                     <motion.h1

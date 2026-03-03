@@ -59,10 +59,10 @@ const Navbar = () => {
                         </div>
                         <div className="flex flex-col">
                             <span className="text-xl font-black tracking-tight text-slate-900 dark:text-white leading-none group-hover:text-indigo-500 transition-colors duration-300">
-                                Pro<span className="text-indigo-500">Academic</span>
+                                Academic <span className="text-indigo-500">Curriculum</span>
                             </span>
                             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 dark:text-gray-500 group-hover:text-indigo-400 transition-colors duration-300 kinetic-text">
-                                Analytics OS
+                                Evaluation Platform
                             </span>
                         </div>
                     </Link>

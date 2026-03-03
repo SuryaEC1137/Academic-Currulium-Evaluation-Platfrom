@@ -1,11 +1,11 @@
-# ProAcademic Analytics
+# Academic Curriculum Evaluation
 
-A state-of-the-art academic analytics platform designed to master your academic journey through AI-powered insights, predictive modeling, and collaborative tools.
+A state-of-the-art academic curriculum evaluation platform designed to master your academic journey through AI-powered insights, predictive modeling, and collaborative tools.
 
 ## Key Features
 
 - **AI Predictive Engine**: Forecast course difficulty and workload using advanced machine learning.
-- **ProAcademic Dashboard**: A sleek, high-density HUD for tracking academic metrics.
+- **Evaluation Dashboard**: A sleek, high-density HUD for tracking academic metrics.
 - **Learning Hub**: Collaborative features for students to connect and share resources.
 - **Gamified Progress**: Earn XP and unlock badges through community contributions.
 
