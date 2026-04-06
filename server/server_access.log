@@ -57165,3 +57165,20 @@
 [2026-04-06T16:38:41.416Z] 🚀 SERVER RESTART: 23092 - UNIQUE_ID: 1775493521425
 [2026-04-06T16:40:29.202Z] 🚀 SERVER RESTART: 26316 - UNIQUE_ID: 1775493629206
 [2026-04-06T16:41:43.804Z] 🚀 SERVER RESTART: 9924 - UNIQUE_ID: 1775493703807
+[2026-04-06T16:44:15.777Z] GET /api/settings
+[2026-04-06T16:44:22.174Z] GET /api/courses?department=Fashion%20Technology
+[2026-04-06T16:45:37.613Z] GET /api/settings
+[2026-04-06T16:46:07.663Z] GET /api/settings
+[2026-04-06T16:46:19.592Z] GET /api/courses?department=Biotechnology
+[2026-04-06T16:46:22.942Z] GET /api/courses?department=Artificial%20Intelligence%20and%20Data%20Science
+[2026-04-06T16:46:37.751Z] GET /api/settings
+[2026-04-06T16:46:59.960Z] POST /api/auth/register
+[2026-04-06T16:46:59.972Z] [AuthRouter] POST /api/auth/register
+[2026-04-06T16:47:01.164Z] GET /api/courses/departments
+[2026-04-06T16:47:01.171Z] GET /api/courses?limit=1000
+[2026-04-06T16:47:02.090Z] GET /api/student/dashboard
+[2026-04-06T16:47:07.852Z] GET /api/settings
+[2026-04-06T16:47:13.403Z] GET /api/student/dashboard
+[2026-04-06T16:47:37.870Z] GET /api/settings
+[2026-04-06T16:48:07.862Z] GET /api/settings
+[2026-04-06T16:48:40.705Z] 🚀 SERVER RESTART: 29664 - UNIQUE_ID: 1775494120706
