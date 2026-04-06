@@ -81,7 +81,7 @@ const RegisterStudent = () => {
 
     return (
         <div className={`${darkMode ? 'dark' : ''}`}>
-            <div className="min-h-screen bg-slate-50 dark:bg-[#020617] transition-colors duration-500 flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden font-outfit">
+            <div className="min-h-screen transition-colors duration-500 flex flex-col items-center justify-center p-6 md:p-12 relative overflow-hidden font-outfit">
 
                 {/* Ultra Background Layer */}
                 <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">

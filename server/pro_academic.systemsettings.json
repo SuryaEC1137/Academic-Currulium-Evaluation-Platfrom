@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "6998540dca91ceca948824e0"
+  },
+  "isMaintenanceMode": false,
+  "announcement": "",
+  "createdAt": {
+    "$date": "2026-02-20T12:31:09.624Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-04T10:25:15.648Z"
+  },
+  "__v": 0
+}]

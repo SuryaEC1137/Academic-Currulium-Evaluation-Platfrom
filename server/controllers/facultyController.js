@@ -606,6 +606,87 @@ const getAIChatResponse = async (req, res) => {
     }
 };
 
+// @desc    Search students by name or email
+// @route   GET /api/faculty/students/search
+// @access  Private/Faculty
+const searchStudents = async (req, res) => {
+    try {
+        const { query } = req.query;
+        if (!query || query.length < 2) {
+            return res.status(400).json({ message: 'Query too short' });
+        }
+
+        const students = await User.find({
+            role: 'student',
+            $or: [
+                { name: { $regex: query, $options: 'i' } },
+                { email: { $regex: query, $options: 'i' } },
+                { studentId: { $regex: query, $options: 'i' } }
+            ]
+        }).select('name email studentId').limit(10);
+
+        res.json(students);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
+// @desc    Enroll a student into a course (Faculty only)
+// @route   POST /api/faculty/course/:courseId/enroll-student
+// @access  Private/Faculty
+const enrollStudentByFaculty = async (req, res) => {
+    try {
+        const { courseId } = req.params;
+        const { studentId: userId } = req.body; // Using mongo _id here for precision
+
+        const course = await Course.findById(courseId);
+        if (!course) {
+            return res.status(404).json({ message: 'Course not found' });
+        }
+
+        // Verify faculty permission
+        const isInstructor = course.instructors.some(ins =>
+            ins.toLowerCase() === req.user.email.toLowerCase() ||
+            ins.toLowerCase() === req.user.name.toLowerCase()
+        );
+
+        if (!isInstructor && req.user.role !== 'admin') {
+            return res.status(403).json({ message: 'Not authorized to manage this course' });
+        }
+
+        const student = await User.findById(userId);
+        if (!student || student.role !== 'student') {
+            return res.status(404).json({ message: 'Student not found' });
+        }
+
+        if (student.courses.includes(courseId)) {
+            return res.status(400).json({ message: 'Student already enrolled in this course' });
+        }
+
+        // Enroll
+        student.courses.push(courseId);
+        await student.save();
+
+        // Update Course Analytics
+        course.analytics.studentCount = (course.analytics.studentCount || 0) + 1;
+        await course.save();
+
+        res.status(200).json({
+            message: 'Student enrolled successfully',
+            student: {
+                _id: student._id,
+                name: student.name,
+                email: student.email
+            }
+        });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
 module.exports = {
     getFacultyDashboard,
     getFacultyCourses,
@@ -625,5 +706,7 @@ module.exports = {
     updateAnnouncement,
     deleteAnnouncement,
     updateResource,
-    deleteResource
+    deleteResource,
+    searchStudents,
+    enrollStudentByFaculty
 };

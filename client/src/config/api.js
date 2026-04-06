@@ -2,8 +2,8 @@
 // Centralized API Configuration
 // In production, use the Render backend URL.
 // In dev, use localhost:5000.
-// VITE_API_URL can still be used to override this behavior.
-const API_BASE_URL = 'http://localhost:5000'; // Standardized to local for development and local deployment
+// VITE_API_BASE_URL can still be used to override this behavior.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'; // Standardized to local for development and local deployment
 
 export const API_ENDPOINTS = {
     // Auth

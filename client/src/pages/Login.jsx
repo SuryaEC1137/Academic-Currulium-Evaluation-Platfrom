@@ -95,7 +95,7 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#F8FAFC] dark:bg-[#030712] flex items-center justify-center p-4 relative overflow-hidden selection:bg-teal-500 selection:text-white transition-colors duration-1000">
+        <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden selection:bg-teal-500 selection:text-white transition-colors duration-1000">
             {/* Background Architecture */}
             <div className="absolute inset-0 pointer-events-none">
                 <AnimatePresence mode="wait">

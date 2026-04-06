@@ -144,7 +144,7 @@ const FeedbackManagement = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-8 pt-32">
+            <div className="min-h-screen p-8 pt-32">
                 <div className="max-w-7xl mx-auto">
                     <h1 className="text-4xl font-black text-gray-900 dark:text-white mb-8">Feedback Management</h1>
                     <TableSkeleton rows={8} columns={6} />
@@ -154,7 +154,7 @@ const FeedbackManagement = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-8 transition-colors duration-300">
+        <div className="min-h-screen p-8 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -227,7 +227,7 @@ const FeedbackManagement = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700"
+                    className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden border border-indigo-100 dark:border-indigo-500/20 shadow-indigo-500/5"
                 >
                     <div className="overflow-x-auto">
                         <table className="w-full">

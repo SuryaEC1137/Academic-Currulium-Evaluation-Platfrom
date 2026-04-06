@@ -24,6 +24,11 @@ const RESTORE_CONFIG = [
         filename: 'student_analyzer.facultycourserequests.json',
         modelName: 'FacultyCourseRequest',
         modelFile: './models/FacultyCourseRequest'
+    },
+    {
+        filename: 'student_analyzer.announcements.json',
+        modelName: 'Announcement',
+        modelFile: './models/Announcement'
     }
 ];
 
@@ -63,6 +68,10 @@ const restore = async () => {
         await mongoose.connect(process.env.MONGO_URI);
         console.log('Connected to MongoDB.');
 
+        const SystemSettings = require('./models/SystemSettings');
+        console.log('Enabling maintenance mode...');
+        await SystemSettings.findOneAndUpdate({}, { isMaintenanceMode: true }, { upsert: true, new: true });
+
         for (const config of RESTORE_CONFIG) {
             const filePath = path.join(__dirname, config.filename);
 
@@ -98,11 +107,20 @@ const restore = async () => {
             }
         }
 
+        console.log('\nDisabling maintenance mode...');
+        await SystemSettings.findOneAndUpdate({}, { isMaintenanceMode: false }, { upsert: true, new: true });
+
         fs.writeFileSync(path.join(__dirname, 'restore_success.txt'), 'Restoration completed successfully at ' + new Date().toISOString());
         console.log('\nAll restoration tasks completed.');
         process.exit(0);
 
     } catch (error) {
+        try {
+            const SystemSettings = require('./models/SystemSettings');
+            await SystemSettings.findOneAndUpdate({}, { isMaintenanceMode: false }, { upsert: true, new: true });
+        } catch (e) {
+            console.error('Failed to disable maintenance mode after error:', e.message);
+        }
         fs.writeFileSync(path.join(__dirname, 'restore_error.txt'), 'Restoration failed: ' + error.message);
         console.error('Global Restore Failed:', error);
         process.exit(1);

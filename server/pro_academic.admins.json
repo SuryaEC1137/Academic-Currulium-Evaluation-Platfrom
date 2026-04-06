@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "699853b8ca91ceca948824dd"
+  },
+  "name": "Administrator",
+  "email": "surya@ec23",
+  "password": "$2a$10$IVzGbAkYkrPtsxl3JH2L9e7haJWLKwBM6X5tlLV.qcY6XzeUB514u",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2026-02-20T12:29:44.368Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-06T15:04:04.583Z"
+  },
+  "__v": 0
+}]

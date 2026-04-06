@@ -76,7 +76,7 @@ const CourseAnalysis = () => {
     };
 
     if (loading) return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <div className="min-h-screen flex items-center justify-center transition-colors duration-300">
             <div className="animate-pulse flex flex-col items-center">
                 <div className="h-16 w-16 bg-indigo-500/20 rounded-full mb-4 animate-bounce"></div>
                 <div className="h-4 w-48 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
@@ -86,7 +86,7 @@ const CourseAnalysis = () => {
     );
 
     if (!analytics) return (
-        <div className="min-h-screen pt-24 px-4 bg-gray-50 dark:bg-gray-900 text-center flex flex-col items-center justify-center">
+        <div className="min-h-screen pt-24 px-4 text-center flex flex-col items-center justify-center">
             <h2 className="text-3xl font-bold text-gray-700 dark:text-gray-200 mb-4">No Data Available</h2>
             <p className="text-gray-500 mb-8 max-w-md">This course hasn't received enough feedback yet inside the Neural Network to generate insights.</p>
             <Link to="/dashboard" className="px-6 py-3 bg-indigo-600 text-white rounded-xl shadow-lg hover:shadow-indigo-600/30 transition">Return to Base</Link>
@@ -155,7 +155,7 @@ const CourseAnalysis = () => {
     };
 
     return (
-        <div className="min-h-screen pt-24 pb-12 px-4 bg-gray-50 dark:bg-[#0f1014] transition-colors duration-500 overflow-x-hidden text-gray-900 dark:text-white relative">
+        <div className="min-h-screen pt-24 pb-12 px-4 transition-colors duration-500 overflow-x-hidden text-gray-900 dark:text-white relative">
             <div className="max-w-7xl mx-auto relative z-10">
                 <button
                     onClick={() => window.history.back()}
@@ -205,7 +205,7 @@ const CourseAnalysis = () => {
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}
-                        className="flex items-center gap-4 bg-white dark:bg-white/5 p-4 rounded-2xl border border-gray-200 dark:border-white/10 backdrop-blur-xl shadow-lg dark:shadow-none"
+                        className="flex items-center gap-4 bg-white dark:bg-white/5 p-4 rounded-2xl border border-indigo-100 dark:border-white/10 backdrop-blur-xl shadow-lg dark:shadow-none"
                     >
                         <div className="text-right">
                             <p className="text-xs text-gray-500 dark:text-gray-400 font-bold uppercase tracking-wider">Total Feedback</p>
@@ -245,7 +245,7 @@ const CourseAnalysis = () => {
                         {/* Predictive AI Trend Module (Module A) */}
                         <motion.div
                             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
-                            className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 mb-8 overflow-hidden relative"
+                            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-indigo-100 dark:border-indigo-500/20 shadow-indigo-500/5 mb-8 overflow-hidden relative"
                         >
                             <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
                             <div className="flex justify-between items-center mb-6 relative z-10">
@@ -290,7 +290,7 @@ const CourseAnalysis = () => {
                         {workloadForecast.length > 0 && (
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}
-                                className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 mb-8 overflow-hidden relative"
+                                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-violet-100 dark:border-violet-500/20 shadow-violet-500/5 mb-8 overflow-hidden relative"
                             >
                                 <div className="flex justify-between items-center mb-6">
                                     <div>
@@ -339,7 +339,7 @@ const CourseAnalysis = () => {
                             {/* Radar Chart */}
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 }}
-                                className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col items-center"
+                                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-blue-100 dark:border-blue-500/20 shadow-blue-500/5 flex flex-col items-center"
                             >
                                 <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2 self-start">
                                     <AcademicCapIcon className="w-5 h-5 text-indigo-500" />
@@ -361,7 +361,7 @@ const CourseAnalysis = () => {
                             {/* Bar Chart */}
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}
-                                className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col items-center"
+                                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-pink-100 dark:border-pink-500/20 shadow-pink-500/5 flex flex-col items-center"
                             >
                                 <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2 self-start">
                                     <ChartBarIcon className="w-5 h-5 text-pink-500" />
@@ -387,7 +387,7 @@ const CourseAnalysis = () => {
                         {/* AI Sentiment Analysis Block */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
-                            className="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-950 rounded-3xl p-10 relative overflow-hidden text-white shadow-2xl"
+                            className="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-950 rounded-3xl p-10 relative overflow-hidden text-white shadow-2xl border border-cyan-500/30"
                         >
                             <div className="relative z-10 flex flex-col md:flex-row gap-8 items-center">
                                 <div className="flex-1">
@@ -445,7 +445,7 @@ const CourseAnalysis = () => {
                     <div className="space-y-8">
                         <motion.div
                             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}
-                            className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700"
+                            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-orange-100 dark:border-orange-500/20 shadow-orange-500/5"
                         >
                             <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-6 flex items-center gap-2">
                                 <ClockIcon className="w-5 h-5 text-orange-500" />
@@ -470,7 +470,7 @@ const CourseAnalysis = () => {
 
                         <motion.div
                             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}
-                            className="bg-orange-50 dark:bg-orange-900/10 p-8 rounded-3xl border border-orange-100 dark:border-orange-500/20 relative overflow-hidden"
+                            className="bg-orange-50/50 dark:bg-orange-900/10 backdrop-blur-md p-8 rounded-3xl border border-amber-200 dark:border-amber-500/30 shadow-lg shadow-amber-500/5 relative overflow-hidden"
                         >
                             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl -mr-16 -mt-16"></div>
                             <h4 className="font-bold text-orange-800 dark:text-orange-200 mb-4 text-lg">Recommendation</h4>

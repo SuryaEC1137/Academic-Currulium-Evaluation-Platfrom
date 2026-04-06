@@ -117,7 +117,7 @@ const StudentDetails = () => {
     };
 
     if (loading) return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors">
+        <div className="min-h-screen flex items-center justify-center transition-colors">
             <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-indigo-500/20 rounded-full animate-bounce mb-4"></div>
                 <p className="text-gray-500 animate-pulse font-medium">Analyzing Student Profile...</p>
@@ -144,10 +144,7 @@ const StudentDetails = () => {
     ];
 
     return (
-        <div className="min-h-screen pt-24 px-4 pb-12 bg-gray-50 dark:bg-[#0a0a0c] transition-colors duration-500 relative overflow-x-hidden">
-            {/* Ultra Ambient Background System */}
-            <div className="absolute top-[-20%] left-[-10%] w-[1000px] h-[1000px] bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-transparent rounded-full blur-[150px] pointer-events-none mix-blend-screen animate-pulse-slow"></div>
-            <div className="absolute bottom-[-20%] right-[-10%] w-[1000px] h-[1000px] bg-gradient-to-tl from-cyan-500/10 via-blue-500/10 to-transparent rounded-full blur-[150px] pointer-events-none mix-blend-screen"></div>
+        <div className="min-h-screen pt-24 px-4 pb-12 transition-colors duration-500 relative overflow-x-hidden">
 
             <div className="max-w-7xl mx-auto relative z-10">
                 <motion.button
@@ -165,7 +162,7 @@ const StudentDetails = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="lg:col-span-8 bg-white/60 dark:bg-white/5 backdrop-blur-3xl rounded-[3.5rem] p-10 lg:p-14 border border-white/40 dark:border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25)] relative overflow-hidden group"
+                        className="lg:col-span-8 bg-white/60 dark:bg-gray-800/40 backdrop-blur-3xl rounded-[3.5rem] p-10 lg:p-14 border border-indigo-100 dark:border-indigo-500/20 shadow-2xl relative overflow-hidden group"
                     >
                         {/* Interactive Shine Effect */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>
@@ -340,7 +337,7 @@ const StudentDetails = () => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="lg:col-span-4 bg-white/60 dark:bg-white/5 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-white/40 dark:border-white/10 shadow-2xl relative overflow-hidden flex flex-col items-center justify-between group"
+                        className="lg:col-span-4 bg-white/60 dark:bg-gray-800/40 backdrop-blur-3xl rounded-[3.5rem] p-10 border border-purple-100 dark:border-purple-500/20 shadow-2xl relative overflow-hidden flex flex-col items-center justify-between group"
                     >
                         <div className="w-full flex justify-between items-start mb-8">
                             <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Intelligence DNA</h3>
@@ -401,7 +398,7 @@ const StudentDetails = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.05 }}
                                 whileHover={{ scale: 1.02 }}
-                                className="bg-white/60 dark:bg-white/5 backdrop-blur-3xl rounded-[2.5rem] p-8 border border-white/40 dark:border-white/10 shadow-xl group hover:border-indigo-500/50 transition-all duration-500"
+                                className="bg-white/60 dark:bg-gray-800/40 backdrop-blur-3xl rounded-[2.5rem] p-8 border border-white/40 dark:border-white/10 shadow-xl group hover:border-indigo-500/50 transition-all duration-500"
                             >
                                 <div className="flex justify-between items-start mb-8 text-center md:text-left">
                                     <div className="flex-1">

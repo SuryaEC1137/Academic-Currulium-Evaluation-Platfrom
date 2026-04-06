@@ -1,0 +1,319 @@
+[{
+  "_id": {
+    "$oid": "69986bd11b0ef123cf4614ee"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f2a04"
+  },
+  "user": {
+    "$oid": "69986b891b0ef123cf4614bb"
+  },
+  "ratings": {
+    "syllabus": 5,
+    "methodology": 5,
+    "workload": 5,
+    "assessment": 5,
+    "resources": 5
+  },
+  "timeCommitment": 5,
+  "comments": "good",
+  "sentimentScore": 3,
+  "difficultyIndex": 5,
+  "createdAt": {
+    "$date": "2026-02-20T14:12:33.992Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-20T14:12:33.992Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a7c4afb1a1b89e9a66e9b9"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f29df"
+  },
+  "user": {
+    "$oid": "69a7c0ceb1a1b89e9a66e7fd"
+  },
+  "ratings": {
+    "syllabus": 7,
+    "methodology": 8,
+    "workload": 8,
+    "assessment": 9,
+    "resources": 5
+  },
+  "timeCommitment": 15,
+  "comments": "good",
+  "sentimentScore": 3,
+  "difficultyIndex": 7.75,
+  "createdAt": {
+    "$date": "2026-03-04T05:35:43.439Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T05:35:43.439Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a7c5b9b1a1b89e9a66ea46"
+  },
+  "course": {
+    "$oid": "6997da3c2169dd22668b977a"
+  },
+  "user": {
+    "$oid": "69a119b13b66794169c4a1d3"
+  },
+  "ratings": {
+    "syllabus": 2,
+    "methodology": 8,
+    "workload": 9,
+    "assessment": 8,
+    "resources": 7
+  },
+  "timeCommitment": 10,
+  "comments": "nil",
+  "sentimentScore": 1,
+  "difficultyIndex": 7,
+  "createdAt": {
+    "$date": "2026-03-04T05:40:09.930Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T05:40:09.930Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a7e803b1a1b89e9a66ebf5"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f29b6"
+  },
+  "user": {
+    "$oid": "69a7e7d4b1a1b89e9a66eb80"
+  },
+  "ratings": {
+    "syllabus": 5,
+    "methodology": 10,
+    "workload": 8,
+    "assessment": 4,
+    "resources": 8
+  },
+  "timeCommitment": 10,
+  "comments": "nothing",
+  "sentimentScore": 0,
+  "difficultyIndex": 6.7,
+  "createdAt": {
+    "$date": "2026-03-04T08:06:27.747Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T08:06:27.747Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a7e81cb1a1b89e9a66ec38"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f29b8"
+  },
+  "user": {
+    "$oid": "69a7e7d4b1a1b89e9a66eb80"
+  },
+  "ratings": {
+    "syllabus": 5,
+    "methodology": 6,
+    "workload": 2,
+    "assessment": 10,
+    "resources": 7
+  },
+  "timeCommitment": 15,
+  "comments": "good",
+  "sentimentScore": 3,
+  "difficultyIndex": 5.7,
+  "createdAt": {
+    "$date": "2026-03-04T08:06:52.058Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T08:06:52.058Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a7e827b1a1b89e9a66ec7c"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f29ba"
+  },
+  "user": {
+    "$oid": "69a7e7d4b1a1b89e9a66eb80"
+  },
+  "ratings": {
+    "syllabus": 5,
+    "methodology": 5,
+    "workload": 5,
+    "assessment": 5,
+    "resources": 5
+  },
+  "timeCommitment": 5,
+  "comments": "good",
+  "sentimentScore": 3,
+  "difficultyIndex": 5,
+  "createdAt": {
+    "$date": "2026-03-04T08:07:03.822Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-04T08:07:03.822Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a8f89a09e6eb24f1bff3d7"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f2a42"
+  },
+  "user": {
+    "$oid": "69a8f87709e6eb24f1bff385"
+  },
+  "ratings": {
+    "syllabus": 3,
+    "methodology": 4,
+    "workload": 6,
+    "assessment": 8,
+    "resources": 7
+  },
+  "timeCommitment": 11,
+  "comments": "",
+  "sentimentScore": 0,
+  "difficultyIndex": 5.7,
+  "createdAt": {
+    "$date": "2026-03-05T03:29:30.076Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-05T03:29:30.076Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69a8f8b009e6eb24f1bff413"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f2a48"
+  },
+  "user": {
+    "$oid": "69a8f87709e6eb24f1bff385"
+  },
+  "ratings": {
+    "syllabus": 7,
+    "methodology": 8,
+    "workload": 10,
+    "assessment": 9,
+    "resources": 8
+  },
+  "timeCommitment": 17,
+  "comments": "good",
+  "sentimentScore": 3,
+  "difficultyIndex": 8.65,
+  "createdAt": {
+    "$date": "2026-03-05T03:29:52.470Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-05T03:29:52.470Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69aa6ec1edaf44bdb6fd2b25"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f2a7f"
+  },
+  "user": {
+    "$oid": "69aa6deaedaf44bdb6fd2a14"
+  },
+  "ratings": {
+    "syllabus": 5,
+    "methodology": 7,
+    "workload": 8,
+    "assessment": 7,
+    "resources": 7
+  },
+  "timeCommitment": 11,
+  "comments": "nothing",
+  "sentimentScore": 0,
+  "difficultyIndex": 6.9,
+  "createdAt": {
+    "$date": "2026-03-06T06:05:53.687Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-06T06:05:53.687Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69aa9cc3edaf44bdb6fd2e5b"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f29f9"
+  },
+  "user": {
+    "$oid": "69aa9c96edaf44bdb6fd2e19"
+  },
+  "ratings": {
+    "syllabus": 7,
+    "methodology": 8,
+    "workload": 6,
+    "assessment": 9,
+    "resources": 8
+  },
+  "timeCommitment": 11,
+  "comments": "good",
+  "sentimentScore": 3,
+  "difficultyIndex": 7.45,
+  "createdAt": {
+    "$date": "2026-03-06T09:22:11.700Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-06T09:22:11.700Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69c10204fb827db2dab1ea4d"
+  },
+  "course": {
+    "$oid": "698eb72386087799976f2a05"
+  },
+  "user": {
+    "$oid": "69c101affb827db2dab1ea07"
+  },
+  "ratings": {
+    "syllabus": 7,
+    "methodology": 9,
+    "workload": 9,
+    "assessment": 5,
+    "resources": 5
+  },
+  "timeCommitment": 15,
+  "comments": "htfyigykgyik",
+  "sentimentScore": 0,
+  "difficultyIndex": 7.2,
+  "createdAt": {
+    "$date": "2026-03-23T09:04:04.229Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-23T09:04:04.229Z"
+  },
+  "__v": 0
+}]

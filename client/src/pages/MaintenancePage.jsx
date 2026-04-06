@@ -2,7 +2,7 @@ import { WrenchScrewdriverIcon } from '@heroicons/react/24/solid';
 
 const MaintenancePage = () => {
     return (
-        <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center p-4 text-center">
+        <div className="min-h-screen flex flex-col items-center justify-center p-4 text-center">
             <div className="w-24 h-24 bg-indigo-500/20 rounded-full flex items-center justify-center mb-6 animate-pulse">
                 <WrenchScrewdriverIcon className="w-12 h-12 text-indigo-500" />
             </div>

@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { TrophyIcon, FireIcon, StarIcon, SparklesIcon, ChartBarIcon } from '@heroicons/react/24/solid';
+import { TrophyIcon, StarIcon, SparklesIcon, ChartBarIcon, ClockIcon } from '@heroicons/react/24/solid';
 
 const GamificationCard = ({ user }) => {
     // Default values if user data isn't fully populated yet
@@ -76,8 +76,8 @@ const GamificationCard = ({ user }) => {
 
                     {/* Streak Badge */}
                     <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/20 border border-orange-500/20 backdrop-blur-md">
-                        <FireIcon className="w-4 h-4 text-orange-500 animate-pulse" />
-                        <span className="text-xs font-black text-orange-600 dark:text-orange-400">{streak} Day Streak</span>
+                        <ClockIcon className="w-4 h-4 text-orange-500 animate-pulse" />
+                        <span className="text-xs font-black text-orange-600 dark:text-orange-400">{streak} Day Continuity</span>
                     </div>
                 </div>
 

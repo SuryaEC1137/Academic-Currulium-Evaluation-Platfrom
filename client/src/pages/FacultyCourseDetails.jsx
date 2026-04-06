@@ -15,6 +15,8 @@ import {
     DocumentTextIcon,
     ClockIcon,
     UserGroupIcon,
+    UserPlusIcon,
+    MagnifyingGlassIcon,
     BookOpenIcon,
     TrashIcon,
     ArrowTopRightOnSquareIcon,
@@ -52,6 +54,16 @@ const FacultyCourseDetails = () => {
     const [editingAnnouncementId, setEditingAnnouncementId] = useState(null);
     const [newResource, setNewResource] = useState({ title: '', description: '', fileUrl: '', fileType: 'link' });
     const [editingResourceId, setEditingResourceId] = useState(null);
+
+    // Student Search & Add State
+    const [showAddStudentModal, setShowAddStudentModal] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+    const [searching, setSearching] = useState(false);
+
+    // Pagination Limits
+    const [studentLimit, setStudentLimit] = useState(12);
+    const [feedbackLimit, setFeedbackLimit] = useState(12);
 
     const [courseAnalytics, setCourseAnalytics] = useState(null);
 
@@ -213,6 +225,36 @@ const FacultyCourseDetails = () => {
         window.location.href = `mailto:${email}`;
     };
 
+    const handleSearchStudents = async (e) => {
+        e.preventDefault();
+        if (searchQuery.length < 2) return;
+        setSearching(true);
+        try {
+            const { data } = await axios.get(getApiUrl(`/api/faculty/students/search?query=${searchQuery}`), config);
+            setSearchResults(data);
+        } catch (error) {
+            addToast('Search failed', 'error');
+        } finally {
+            setSearching(false);
+        }
+    };
+
+    const handleAddStudent = async (studentId) => {
+        try {
+            await axios.post(getApiUrl(`/api/faculty/course/${courseId}/enroll-student`), { studentId }, config);
+            addToast('Student added successfully!', 'success');
+            // Refresh student list and course data
+            fetchAllData();
+            // Remove from search results or just close modal?
+            // Closing modal for now for cleaner UX
+            setShowAddStudentModal(false);
+            setSearchQuery('');
+            setSearchResults([]);
+        } catch (error) {
+            addToast(error.response?.data?.message || 'Failed to add student', 'error');
+        }
+    };
+
     if (loading) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-[#0f1014] relative overflow-hidden">
@@ -250,13 +292,7 @@ const FacultyCourseDetails = () => {
     );
 
     return (
-        <div className="min-h-screen pt-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-[#0f1014] text-slate-900 dark:text-white font-sans relative overflow-hidden selection:bg-indigo-500/30 transition-colors duration-500">
-            {/* Ambient Background */}
-            <div className="fixed inset-0 pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[800px] h-[800px] bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-pulse-slow"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-emerald-500/10 dark:bg-emerald-600/10 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-pulse-slow-reverse"></div>
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 dark:opacity-20 pointer-events-none"></div>
-            </div>
+        <div className="min-h-screen pt-28 px-4 sm:px-6 lg:px-8 text-slate-900 dark:text-white font-sans relative overflow-hidden selection:bg-indigo-500/30 transition-colors duration-500">
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
                 {/* Navigation Header */}
@@ -308,7 +344,7 @@ const FacultyCourseDetails = () => {
                         >
                             {/* Course Risk Profile Section */}
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                                <div className="lg:col-span-2 bg-white/60 dark:bg-[#0a0a0a]/60 backdrop-blur-xl border border-slate-200 dark:border-white/5 rounded-[2rem] p-8 shadow-sm">
+                                <div className="lg:col-span-2 bg-white/60 dark:bg-gray-800/40 backdrop-blur-xl border border-indigo-100 dark:border-indigo-500/20 rounded-[2rem] p-8 shadow-sm">
                                     <div className="flex items-center justify-between mb-8">
                                         <div>
                                             <h3 className="text-2xl font-black text-slate-800 dark:text-white flex items-center gap-3 tracking-tighter">
@@ -376,7 +412,7 @@ const FacultyCourseDetails = () => {
                                 </div>
                             </div>
 
-                            <div className="bg-white/60 dark:bg-gradient-to-r dark:from-indigo-500/10 dark:to-purple-500/10 border border-slate-200 dark:border-indigo-500/20 rounded-3xl p-8 flex justify-between items-center backdrop-blur-xl shadow-sm dark:shadow-none">
+                            <div className="bg-white/60 dark:bg-gray-800/60 border border-amber-100 dark:border-amber-500/20 rounded-3xl p-8 flex justify-between items-center backdrop-blur-xl shadow-lg shadow-amber-500/5">
                                 <div>
                                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
                                         <SparklesIcon className="w-6 h-6 text-amber-500 dark:text-amber-400" /> Student Voices
@@ -387,13 +423,13 @@ const FacultyCourseDetails = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {feedbacks.length > 0 ? (
-                                    feedbacks.map((item, index) => (
+                                    feedbacks.slice(0, feedbackLimit).map((item, index) => (
                                         <motion.div
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: index * 0.05 }}
                                             key={item._id}
-                                            className="group relative bg-white dark:bg-[#0a0a0a]/60 backdrop-blur-xl border border-slate-200 dark:border-white/5 rounded-3xl p-6 hover:border-indigo-500/30 transition-all hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1"
+                                            className="group relative bg-white/80 dark:bg-gray-800/40 backdrop-blur-xl border border-indigo-50 dark:border-indigo-500/20 rounded-3xl p-6 hover:border-indigo-500/50 transition-all hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1"
                                         >
                                             <div className="flex justify-between items-start mb-4 relative z-10">
                                                 <div className="flex items-center gap-3">
@@ -443,6 +479,16 @@ const FacultyCourseDetails = () => {
                                     </div>
                                 )}
                             </div>
+                            {feedbacks.length > feedbackLimit && (
+                                <div className="mt-8 flex justify-center">
+                                    <button
+                                        onClick={() => setFeedbackLimit(prev => prev + 12)}
+                                        className="px-8 py-3 rounded-xl bg-indigo-600 text-white font-bold text-xs uppercase tracking-widest shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 hover:-translate-y-1 transition-all"
+                                    >
+                                        Load More Feedback
+                                    </button>
+                                </div>
+                            )}
                         </motion.div>
                     )}
 
@@ -545,11 +591,18 @@ const FacultyCourseDetails = () => {
                                     <UserGroupIcon className="w-8 h-8 text-indigo-500" /> Enrolled Students
                                     <span className="px-3 py-1 bg-indigo-50 dark:bg-white/10 rounded-full text-sm text-indigo-600 dark:text-gray-300 font-bold border border-indigo-100 dark:border-white/5">{students.length}</span>
                                 </h3>
+                                <button
+                                    onClick={() => setShowAddStudentModal(true)}
+                                    className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-[10px] uppercase tracking-widest shadow-lg shadow-indigo-600/20 transition-all hover:-translate-y-0.5"
+                                >
+                                    <UserPlusIcon className="w-4 h-4" />
+                                    Add Student
+                                </button>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {students.length > 0 ? (
-                                    students.map((student, i) => (
+                                    students.slice(0, studentLimit).map((student, i) => (
                                         <motion.div
                                             key={student._id}
                                             initial={{ opacity: 0, scale: 0.95 }}
@@ -628,6 +681,16 @@ const FacultyCourseDetails = () => {
                                     </div>
                                 )}
                             </div>
+                            {students.length > studentLimit && (
+                                <div className="mt-8 flex justify-center">
+                                    <button
+                                        onClick={() => setStudentLimit(prev => prev + 12)}
+                                        className="px-8 py-3 rounded-xl bg-indigo-600 text-white font-bold text-xs uppercase tracking-widest shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 hover:-translate-y-1 transition-all"
+                                    >
+                                        Load More Students
+                                    </button>
+                                </div>
+                            )}
                         </motion.div>
                     )}
 
@@ -912,6 +975,106 @@ const FacultyCourseDetails = () => {
                             </div>
                         </motion.div>
                     )}
+
+                    {/* --- ADD STUDENT MODAL --- */}
+                    <AnimatePresence>
+                        {showAddStudentModal && (
+                            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    onClick={() => setShowAddStudentModal(false)}
+                                    className="absolute inset-0 bg-[#0f1014]/80 backdrop-blur-md"
+                                />
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                                    className="relative z-10 w-full max-w-2xl bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-[2.5rem] shadow-2xl overflow-hidden"
+                                >
+                                    <div className="p-8 md:p-10">
+                                        <div className="flex justify-between items-center mb-8">
+                                            <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tighter flex items-center gap-4">
+                                                <div className="p-3 rounded-2xl bg-indigo-500/10 text-indigo-500">
+                                                    <UserPlusIcon className="w-8 h-8" />
+                                                </div>
+                                                Enrolment Hub
+                                            </h3>
+                                            <button onClick={() => setShowAddStudentModal(false)} className="p-3 hover:bg-slate-100 dark:hover:bg-white/10 rounded-[1.5rem] text-slate-400 transition-all border border-transparent hover:border-slate-200 dark:hover:border-white/10">
+                                                <XMarkIcon className="w-6 h-6" />
+                                            </button>
+                                        </div>
+
+                                        <form onSubmit={handleSearchStudents} className="relative mb-8">
+                                            <input
+                                                type="text"
+                                                placeholder="Search by name, email or ID..."
+                                                value={searchQuery}
+                                                onChange={(e) => setSearchQuery(e.target.value)}
+                                                className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-3xl px-6 py-5 pl-14 text-slate-900 dark:text-white outline-none focus:border-indigo-500/50 transition-all font-bold placeholder:text-slate-400 dark:placeholder:text-gray-600 shadow-inner"
+                                            />
+                                            <MagnifyingGlassIcon className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                                            <button
+                                                type="submit"
+                                                disabled={searching || searchQuery.length < 2}
+                                                className="absolute right-3 top-1/2 -translate-y-1/2 px-6 py-3 bg-indigo-600 text-white rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-indigo-700 transition-all disabled:opacity-50"
+                                            >
+                                                {searching ? 'Parsing...' : 'Search'}
+                                            </button>
+                                        </form>
+
+                                        <div className="space-y-4 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
+                                            {searchResults.length > 0 ? (
+                                                searchResults.map((student) => {
+                                                    const isEnrolled = students.some(s => s._id === student._id);
+                                                    return (
+                                                        <motion.div
+                                                            initial={{ opacity: 0, x: -10 }}
+                                                            animate={{ opacity: 1, x: 0 }}
+                                                            key={student._id}
+                                                            className="flex items-center justify-between p-6 bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5 rounded-3xl group hover:border-indigo-500/30 transition-all shadow-sm"
+                                                        >
+                                                            <div className="flex items-center gap-4">
+                                                                <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center font-black text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 group-hover:scale-110 transition-transform">
+                                                                    {student.name.charAt(0)}
+                                                                </div>
+                                                                <div>
+                                                                    <h4 className="font-black text-slate-800 dark:text-white text-sm uppercase tracking-tight">{student.name}</h4>
+                                                                    <p className="text-[10px] text-slate-500 dark:text-gray-500 font-bold uppercase tracking-widest">{student.email}</p>
+                                                                </div>
+                                                            </div>
+                                                            {isEnrolled ? (
+                                                                <span className="flex items-center gap-2 text-[9px] font-black text-emerald-500 uppercase tracking-widest px-4 py-2 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
+                                                                    <CheckCircleIcon className="w-4 h-4" /> Already Enrolled
+                                                                </span>
+                                                            ) : (
+                                                                <button
+                                                                    onClick={() => handleAddStudent(student._id)}
+                                                                    className="px-6 py-3 bg-white dark:bg-white/10 text-slate-900 dark:text-white rounded-2xl font-black text-[10px] uppercase tracking-widest border border-slate-200 dark:border-white/10 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all shadow-sm"
+                                                                >
+                                                                    Enroll Student
+                                                                </button>
+                                                            )}
+                                                        </motion.div>
+                                                    );
+                                                })
+                                            ) : (
+                                                <div className="py-20 text-center opacity-40">
+                                                    <MagnifyingGlassIcon className="w-12 h-12 mx-auto mb-4" />
+                                                    <p className="text-[10px] font-black uppercase tracking-[0.2em]">{searchQuery ? 'No students found matching query.' : 'Search for students by credentials.'}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className="bg-slate-50 dark:bg-white/5 p-6 border-t border-slate-200 dark:border-white/5 flex items-center gap-3">
+                                        <SparklesIcon className="w-4 h-4 text-amber-500" />
+                                        <p className="text-[9px] font-bold text-slate-400 dark:text-gray-500 uppercase tracking-widest">Enrolling students will grant them instant access to all course modules and analysis.</p>
+                                    </div>
+                                </motion.div>
+                            </div>
+                        )}
+                    </AnimatePresence>
 
                 </div>
             </div>

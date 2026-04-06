@@ -222,7 +222,7 @@ const CourseManagement = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-8 pt-32">
+            <div className="min-h-screen p-8 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto">
                     <h1 className="text-4xl font-black text-gray-900 dark:text-white mb-8">Course Management</h1>
                     <TableSkeleton rows={10} columns={6} />
@@ -232,7 +232,7 @@ const CourseManagement = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-8 transition-colors duration-300">
+        <div className="min-h-screen p-8 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div

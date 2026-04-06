@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { SparklesIcon, ChartBarIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon } from '@heroicons/react/24/solid';
+import { AcademicCapIcon, ChartBarIcon, UserGroupIcon, ShieldCheckIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 
 const LandingPage = () => {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ const LandingPage = () => {
     }, [navigate]);
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-[#030712] text-slate-900 dark:text-white overflow-hidden relative selection:bg-indigo-500 selection:text-white transition-colors duration-500">
+        <div className="min-h-screen text-slate-900 dark:text-white overflow-hidden relative selection:bg-indigo-500 selection:text-white transition-colors duration-500">
 
             {/* Background Mesh Orbs */}
             {/* Background Mesh (Global System Active) */}
@@ -34,7 +34,7 @@ const LandingPage = () => {
                         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur-md mb-8 hover:bg-white/60 dark:hover:bg-white/10 transition cursor-default shadow-sm"
                     >
-                        <SparklesIcon className="w-4 h-4 text-amber-500" />
+                        <AcademicCapIcon className="w-4 h-4 text-indigo-500" />
                         <span className="text-sm font-bold tracking-wide text-slate-600 dark:text-gray-300">BIT Sathy — Academic Curriculum Evaluation</span>
                     </motion.div>
 
@@ -65,7 +65,7 @@ const LandingPage = () => {
                     >
                         <div className="flex flex-col md:flex-row gap-4">
                             <Link to="/register" className="px-8 py-4 bg-indigo-600 text-white dark:bg-white dark:text-gray-900 rounded-2xl font-black text-lg hover:bg-indigo-700 dark:hover:bg-gray-100 transition shadow-xl shadow-indigo-500/20 dark:shadow-white/10 flex items-center gap-2 group justify-center">
-                                <RocketLaunchIcon className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 Get Started
                             </Link>
                             <Link to="/login" className="px-8 py-4 bg-white dark:bg-white/5 text-slate-900 dark:text-white rounded-2xl font-bold text-lg border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/10 transition backdrop-blur-md justify-center text-center">

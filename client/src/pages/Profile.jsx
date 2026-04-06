@@ -82,7 +82,7 @@ const Profile = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-[#030712]">
+            <div className="min-h-screen flex items-center justify-center">
                 <div className="w-16 h-16 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
             </div>
         );
@@ -90,13 +90,7 @@ const Profile = () => {
 
     return (
         <RouteTransition>
-            <div className="min-h-screen pt-28 pb-12 px-4 bg-slate-50 dark:bg-[#030712] transition-colors duration-700 relative overflow-hidden">
-                {/* Ultra Ambient Background */}
-                <div className="fixed inset-0 pointer-events-none z-0">
-                    <div className="absolute top-[-10%] left-[-10%] w-[1000px] h-[1000px] bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-[150px] animate-pulse-slow mix-blend-multiply dark:mix-blend-screen animate-light-leak"></div>
-                    <div className="absolute bottom-[-10%] right-[-10%] w-[1000px] h-[1000px] bg-purple-500/10 dark:bg-purple-600/10 rounded-full blur-[150px] animate-pulse-slow delay-1000 mix-blend-multiply dark:mix-blend-screen animate-light-leak" style={{ animationDelay: '-5s' }}></div>
-                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 dark:opacity-20 brightness-100 contrast-150"></div>
-                </div>
+            <div className="min-h-screen pt-28 pb-12 px-4 transition-colors duration-700 relative overflow-hidden">
 
                 <div className="max-w-7xl mx-auto relative z-10">
                     {userInfo?.role === 'admin' ? (

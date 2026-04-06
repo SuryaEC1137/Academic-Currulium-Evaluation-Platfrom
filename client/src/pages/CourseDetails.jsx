@@ -53,7 +53,7 @@ const CourseDetails = () => {
             </button>
 
             {/* Header Card */}
-            <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 shadow-2xl mb-8 relative overflow-hidden">
+            <div className="bg-gradient-to-r from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-8 border border-indigo-500/30 shadow-2xl mb-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
                 <div className="relative z-10">
                     <span className="bg-blue-900/50 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">
@@ -77,7 +77,7 @@ const CourseDetails = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700"
+                        className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-6 rounded-xl border border-indigo-100 dark:border-indigo-500/20 shadow-lg shadow-indigo-500/5"
                     >
                         <h3 className="text-gray-400 text-sm font-medium mb-4 flex items-center gap-2">
                             <ChartBarIcon className="w-4 h-4 text-primary" /> Overall Difficulty
@@ -99,7 +99,7 @@ const CourseDetails = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700"
+                        className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-6 rounded-xl border border-orange-100 dark:border-orange-500/20 shadow-lg shadow-orange-500/5"
                     >
                         <h3 className="text-gray-400 text-sm font-medium mb-4 flex items-center gap-2">
                             <ClockIcon className="w-4 h-4 text-orange-400" /> Avg. Time Commitment
@@ -115,7 +115,7 @@ const CourseDetails = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700"
+                        className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-6 rounded-xl border border-purple-100 dark:border-purple-500/20 shadow-lg shadow-purple-500/5"
                     >
                         <h3 className="text-gray-400 text-sm font-medium mb-4 flex items-center gap-2">
                             <AcademicCapIcon className="w-4 h-4 text-purple-400" /> Student Sentiment

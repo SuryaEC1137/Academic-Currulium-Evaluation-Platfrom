@@ -27,13 +27,16 @@ app.use(helmet({
 app.use(express.json());
 
 // Enhanced CORS configuration
+const allowedOrigins = [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'https://student-difficulty-course-analyzer-2.onrender.com', // Frontend/Backend link provided
+    'https://student-difficulty-course-analyzer.onrender.com',
+    process.env.FRONTEND_URL // Dynamic frontend URL (e.g. from Netlify)
+].filter(Boolean);
+
 app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        'http://localhost:5174',
-        'https://student-difficulty-course-analyzer-2.onrender.com', // Frontend/Backend link provided
-        'https://student-difficulty-course-analyzer.onrender.com'
-    ],
+    origin: allowedOrigins,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token']
@@ -224,12 +227,7 @@ const server = app.listen(PORT, () => {
 // --- SOCAL HUB: Real-Time Communication ---
 const io = socketIO(server, {
     cors: {
-        origin: [
-            'http://localhost:5173',
-            'http://localhost:5174',
-            'https://student-difficulty-course-analyzer-2.onrender.com',
-            'https://student-difficulty-course-analyzer.onrender.com'
-        ],
+        origin: allowedOrigins, // Utilizing the same allowed origins as API CORS
         methods: ["GET", "POST"],
         credentials: true
     }

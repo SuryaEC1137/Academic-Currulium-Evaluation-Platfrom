@@ -14,7 +14,9 @@ const {
     uploadResource,
     updateResource,
     deleteResource,
-    getResources
+    getResources,
+    searchStudents,
+    enrollStudentByFaculty
 } = require('../controllers/facultyController');
 
 router.use(protect);
@@ -44,5 +46,8 @@ router.delete('/request/:id', require('../controllers/facultyController').delete
 router.get('/analytics/course/:courseId', require('../controllers/facultyController').getCourseRiskAnalytics);
 
 router.post('/ai-chat', require('../controllers/facultyController').getAIChatResponse);
+
+router.get('/students/search', searchStudents);
+router.post('/course/:courseId/enroll-student', enrollStudentByFaculty);
 
 module.exports = router;

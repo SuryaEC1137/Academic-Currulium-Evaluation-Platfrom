@@ -1,6 +1,6 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRightOnRectangleIcon, ChartBarIcon, SparklesIcon, BoltIcon, TrophyIcon } from '@heroicons/react/24/solid';
+import { ArrowRightOnRectangleIcon, ChartBarIcon, AcademicCapIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 import ThemeToggle from './ThemeToggle';
 import { useState, useEffect, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
@@ -55,7 +55,7 @@ const Navbar = () => {
                     <Link to="/" className="group flex items-center gap-3 active:scale-95 transition-transform duration-300">
                         <div className="w-10 h-10 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-600/20 group-hover:rotate-[15deg] group-hover:scale-110 transition-all duration-500 relative overflow-hidden icon-glow">
                             <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 pointer-events-none" />
-                            <BoltIcon className="w-6 h-6 text-white relative z-10" />
+                            <AcademicCapIcon className="w-6 h-6 text-white relative z-10" />
                         </div>
                         <div className="flex flex-col">
                             <span className="text-xl font-black tracking-tight text-slate-900 dark:text-white leading-none group-hover:text-indigo-500 transition-colors duration-300">
@@ -115,7 +115,7 @@ const Navbar = () => {
                                                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                                 />
                                             )}
-                                            <SparklesIcon className="w-4 h-4 relative z-10 group-hover/link:scale-110 transition-transform" />
+                                            <AcademicCapIcon className="w-4 h-4 relative z-10 group-hover/link:scale-110 transition-transform" />
                                             <span className="relative z-10">Student View</span>
                                         </Link>
                                     )}
@@ -156,7 +156,7 @@ const Navbar = () => {
                                 <Link to="/login" className="text-sm font-bold text-slate-600 dark:text-gray-300 hover:text-indigo-500 transition">Log In</Link>
                                 <Link to="/register" className="group relative px-6 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-gray-900 font-bold text-sm shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all overflow-hidden border border-transparent dark:border-white/10">
                                     <span className="relative z-10 flex items-center gap-2">
-                                        Get Started <SparklesIcon className="w-4 h-4 text-yellow-400" />
+                                        Get Started <ArrowRightIcon className="w-4 h-4" />
                                     </span>
                                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </Link>

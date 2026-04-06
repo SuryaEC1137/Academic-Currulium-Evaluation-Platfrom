@@ -570,7 +570,7 @@ const FacultyDashboard = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-[#0f1014] relative overflow-hidden">
+            <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-500/10 via-slate-50 to-slate-50 dark:from-indigo-900/20 dark:via-[#0f1014] dark:to-[#0f1014]"></div>
                 <motion.div
                     animate={{ rotate: 360 }}
@@ -582,7 +582,7 @@ const FacultyDashboard = () => {
     }
 
     return (
-        <div className="min-h-screen pt-28 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-[#0f1014] text-slate-900 dark:text-white font-sans relative overflow-hidden selection:bg-indigo-500/30">
+        <div className="min-h-screen pt-28 px-4 sm:px-6 lg:px-8 text-slate-900 dark:text-white font-sans relative overflow-hidden selection:bg-indigo-500/30">
             {/* Ultra Ambient Background */}
             {/* Ultra Ambient Background Removed (Using Global BackgroundSystem) */}
 

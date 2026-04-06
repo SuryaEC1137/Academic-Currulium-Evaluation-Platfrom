@@ -191,7 +191,7 @@ const RequestManagement = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-8 pt-32">
+            <div className="min-h-screen p-8 pt-32">
                 <div className="max-w-7xl mx-auto">
                     <h1 className="text-4xl font-black text-gray-900 dark:text-white mb-8">Request Management</h1>
                     <TableSkeleton rows={8} columns={7} />
@@ -201,7 +201,7 @@ const RequestManagement = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 p-8 transition-colors duration-300">
+        <div className="min-h-screen p-8 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -220,7 +220,7 @@ const RequestManagement = () => {
 
                 {/* Stats Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-                    <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700">
+                    <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-4 border border-blue-100 dark:border-blue-500/20 shadow-lg shadow-blue-500/5">
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Total Requests</p>
                         <p className="text-3xl font-black text-blue-600 dark:text-blue-400">{stats.total}</p>
                     </div>
@@ -232,7 +232,7 @@ const RequestManagement = () => {
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Approved</p>
                         <p className="text-3xl font-black text-green-600 dark:text-green-400">{stats.approved}</p>
                     </div>
-                    <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-red-200 dark:border-red-700/50">
+                    <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-4 border border-red-200 dark:border-red-700/30 shadow-lg shadow-red-500/5">
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Rejected</p>
                         <p className="text-3xl font-black text-red-600 dark:text-red-400">{stats.rejected}</p>
                     </div>
@@ -293,7 +293,7 @@ const RequestManagement = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700"
+                    className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden border border-blue-100 dark:border-blue-500/20 shadow-blue-500/5"
                 >
                     <div className="overflow-x-auto">
                         <table className="w-full">

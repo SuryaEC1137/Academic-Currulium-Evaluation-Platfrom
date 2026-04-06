@@ -105,12 +105,7 @@ const Leaderboard = () => {
 
     return (
         <RouteTransition>
-            <div className="min-h-screen pt-32 pb-20 px-4 bg-gray-50 dark:bg-[#030712] relative overflow-hidden transition-colors duration-500">
-                {/* Background Decor */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
-                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-200/40 dark:bg-indigo-600/10 rounded-full blur-[120px]"></div>
-                    <div className="absolute top-[20%] right-[-10%] w-[30%] h-[30%] bg-purple-200/40 dark:bg-purple-600/10 rounded-full blur-[120px]"></div>
-                </div>
+            <div className="min-h-screen pt-32 pb-20 px-4 relative overflow-hidden transition-colors duration-500">
 
                 <div className="max-w-4xl mx-auto relative z-10">
                     {/* Header */}
@@ -141,7 +136,7 @@ const Leaderboard = () => {
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                className="bg-white/60 dark:bg-white/5 border border-white/20 dark:border-white/10 p-4 rounded-3xl backdrop-blur-xl flex items-center gap-4 shadow-sm"
+                                className="bg-white/60 dark:bg-gray-800/40 border border-amber-200/50 dark:border-amber-500/30 p-4 rounded-3xl backdrop-blur-xl flex items-center gap-4 shadow-lg shadow-amber-500/5"
                             >
                                 <div className="w-12 h-12 rounded-full bg-amber-500/20 flex items-center justify-center border border-amber-500/30">
                                     <SparklesIcon className="w-6 h-6 text-amber-500" />
@@ -160,7 +155,7 @@ const Leaderboard = () => {
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="mb-8 p-8 rounded-[2.5rem] bg-indigo-600 border border-indigo-400/50 shadow-2xl shadow-indigo-500/20 flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden"
+                                className="mb-8 p-8 rounded-[2.5rem] bg-indigo-600/90 border border-indigo-400/50 shadow-2xl shadow-indigo-500/20 flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden backdrop-blur-md"
                             >
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] -mr-32 -mt-32"></div>
                                 <div className="flex items-center gap-6 relative z-10">
@@ -203,7 +198,7 @@ const Leaderboard = () => {
                     <div className="space-y-4">
                         {loading ? (
                             Array(10).fill(0).map((_, i) => (
-                                <div key={i} className="h-24 bg-white/40 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-[2rem] animate-pulse"></div>
+                                <div key={i} className="h-24 bg-white/40 dark:bg-gray-800/40 border border-gray-200 dark:border-white/10 rounded-[2rem] animate-pulse"></div>
                             ))
                         ) : leaderboard.length > 0 ? (
                             <AnimatePresence>
@@ -221,7 +216,7 @@ const Leaderboard = () => {
                                 ))}
                             </AnimatePresence>
                         ) : (
-                            <div className="text-center py-20 bg-white/40 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-[3rem]">
+                            <div className="text-center py-20 bg-white/40 dark:bg-gray-800/40 border border-gray-200 dark:border-white/10 rounded-[3rem] backdrop-blur-md">
                                 <UserIcon className="w-16 h-16 text-gray-400 dark:text-gray-700 mx-auto mb-4" />
                                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">The arena is empty...</h3>
                                 <p className="text-gray-500">Be the first to claim your spot in the Hall of Champions.</p>

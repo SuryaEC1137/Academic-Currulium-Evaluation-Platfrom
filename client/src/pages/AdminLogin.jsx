@@ -60,7 +60,7 @@ const AdminLogin = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#F0F2F5] dark:bg-[#030712] flex items-center justify-center p-4 relative overflow-hidden selection:bg-indigo-500 selection:text-white transition-colors duration-1000 font-inter">
+        <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden selection:bg-indigo-500 selection:text-white transition-colors duration-1000 font-inter">
             {/* Background HUD Grid */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px] opacity-40"></div>

@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { useToast } from '../context/ToastContext';
-import { SparklesIcon, TrophyIcon, FireIcon, PaperAirplaneIcon, ArrowLeftIcon, StarIcon, BoltIcon } from '@heroicons/react/24/solid';
+import { SparklesIcon, TrophyIcon, FireIcon, PaperAirplaneIcon, ArrowLeftIcon, StarIcon, ArrowPathIcon } from '@heroicons/react/24/solid';
 import { API_ENDPOINTS } from '../config/api';
 
 const FeedbackForm = () => {
@@ -71,15 +71,7 @@ const FeedbackForm = () => {
     ];
 
     return (
-        <div className="min-h-screen pt-24 pb-12 px-4 bg-gray-50 dark:bg-[#0f1014] transition-colors duration-500 relative selection:bg-indigo-500 selection:text-white">
-            {/* Noise Overlay */}
-            <div className="absolute inset-0 opacity-10 dark:opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none"></div>
-
-            {/* Gamification Background */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-[120px] pointer-events-none"></div>
-                <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-[120px] pointer-events-none"></div>
-            </div>
+        <div className="min-h-screen pt-24 pb-12 px-4 transition-colors duration-500 relative selection:bg-indigo-500 selection:text-white">
 
             <div className="max-w-4xl mx-auto relative z-10">
                 <button
@@ -92,7 +84,7 @@ const FeedbackForm = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-white/80 dark:bg-white/5 backdrop-blur-3xl rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-white/50 dark:border-white/10 relative overflow-hidden"
+                    className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-3xl rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-indigo-100 dark:border-indigo-500/20 relative overflow-hidden"
                 >
                     {/* Quest Header */}
                     <div className="text-center mb-12 relative">
@@ -226,7 +218,7 @@ const FeedbackForm = () => {
                             className={`w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xl font-black py-6 rounded-2xl shadow-2xl shadow-indigo-500/20 transition-all flex items-center justify-center gap-3 uppercase tracking-wider ${loading ? 'opacity-70 grayscale cursor-not-allowed' : ''}`}
                         >
                             {loading ? (
-                                <><BoltIcon className="w-6 h-6 animate-spin" /> Syncing Progress...</>
+                                <><ArrowPathIcon className="w-6 h-6 animate-spin" /> Syncing Progress...</>
                             ) : (
                                 <><FireIcon className="w-6 h-6 animate-pulse" /> Complete Quest</>
                             )}

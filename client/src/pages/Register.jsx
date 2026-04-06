@@ -138,7 +138,7 @@ const Register = () => {
     const semesters = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-white flex items-center justify-center p-4 py-24 relative overflow-hidden font-sans selection:bg-indigo-500/30 transition-colors duration-500">
+        <div className="min-h-screen text-slate-900 dark:text-white flex items-center justify-center p-4 py-24 relative overflow-hidden font-sans selection:bg-indigo-500/30 transition-colors duration-500">
             {/* Premium Mesh Orbs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none transform-gpu">
                 <motion.div

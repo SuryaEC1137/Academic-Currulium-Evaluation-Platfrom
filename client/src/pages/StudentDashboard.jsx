@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, memo, useMemo, forwardRef } from 'react';
 import axios from 'axios';
-import { SparklesIcon, BookOpenIcon, PlusCircleIcon, ArrowRightIcon, FireIcon, MagnifyingGlassIcon, FunnelIcon, LinkIcon, DocumentIcon, PlayIcon } from '@heroicons/react/24/solid';
+import { AcademicCapIcon, BookOpenIcon, PlusCircleIcon, ArrowRightIcon, FireIcon, MagnifyingGlassIcon, FunnelIcon, LinkIcon, DocumentIcon, PlayIcon } from '@heroicons/react/24/solid';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import RouteTransition from '../components/RouteTransition';
@@ -176,7 +176,7 @@ const CourseCard = memo(forwardRef(({ course, idx, isEnrolled, onEnroll, onDrop 
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             whileHover={{ y: -10, scale: 1.02 }}
-            className="glass-ultra rounded-[2.5rem] shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 group flex flex-col h-full relative perspective-1000 holographic-shine interaction-card"
+            className="glass-ultra rounded-[2.5rem] shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 group flex flex-col h-full relative perspective-1000 holographic-shine interaction-card border border-indigo-100 dark:border-indigo-500/20"
             ref={ref}
         >
             <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -490,7 +490,7 @@ const StudentDashboard = () => {
 
     return (
         <RouteTransition>
-            <div className="min-h-screen pt-28 pb-12 px-4 bg-slate-50 dark:bg-[#030712] transition-colors duration-700 relative overflow-hidden">
+            <div className="min-h-screen pt-28 pb-12 px-4 transition-colors duration-700 relative overflow-hidden">
                 {/* Ultra Ambient Background Removed (Using Global BackgroundSystem) */}
 
                 <style>
@@ -513,7 +513,7 @@ const StudentDashboard = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 text-xs font-black mb-8 self-start border border-indigo-100 dark:border-indigo-500/30 shadow-sm backdrop-blur-md"
                             >
-                                <SparklesIcon className="w-4 h-4" />
+                                <AcademicCapIcon className="w-4 h-4" />
                                 <span className="uppercase tracking-[0.2em]">ProAcademic Dashboard v1.0</span>
                             </motion.div>
 

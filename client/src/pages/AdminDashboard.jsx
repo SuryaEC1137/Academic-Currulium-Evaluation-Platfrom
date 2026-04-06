@@ -4,9 +4,9 @@ import { useNavigate, Link, useSearchParams } from 'react-router-dom'; // Added 
 import { motion, AnimatePresence } from 'framer-motion';
 import { API_ENDPOINTS, getApiUrl } from '../config/api';
 import {
-    PlusIcon, ChartPieIcon, AcademicCapIcon, UserGroupIcon,
+    AcademicCapIcon, UserGroupIcon,
     InboxStackIcon, MagnifyingGlassIcon, ExclamationTriangleIcon, CheckBadgeIcon, CpuChipIcon,
-    BoltIcon, ChatBubbleLeftRightIcon, BookOpenIcon, FunnelIcon
+    ChatBubbleLeftRightIcon, BookOpenIcon, FunnelIcon, PlusIcon, ChartPieIcon
 } from '@heroicons/react/24/solid';
 import SyllabusUpload from '../components/SyllabusUpload';
 import AdminRequests from '../components/AdminRequests';
@@ -176,7 +176,7 @@ const AdminDashboard = () => {
     if (!userInfo) return null; // Prevent render until auth check
 
     return (
-        <div className="min-h-screen pt-24 px-4 pb-12 bg-gray-50 dark:bg-[#0f1014] text-gray-900 dark:text-white transition-colors duration-500 relative overflow-hidden">
+        <div className="min-h-screen pt-24 px-4 pb-12 text-gray-900 dark:text-white transition-colors duration-500 relative overflow-hidden">
             {/* Background Effects - Dynamic for Light/Dark */}
             <div className="absolute top-0 left-0 w-full h-[600px] bg-blue-100/50 dark:bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none transition-colors duration-500"></div>
             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-100/50 dark:bg-purple-900/10 rounded-full blur-[120px] pointer-events-none transition-colors duration-500"></div>
@@ -190,7 +190,7 @@ const AdminDashboard = () => {
                     <div>
                         <div className="flex items-center gap-3 mb-2">
                             <div className="p-2 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-lg shadow-lg shadow-blue-600/20">
-                                <BoltIcon className="w-6 h-6 text-white" />
+                                <AcademicCapIcon className="w-6 h-6 text-white" />
                             </div>
                             <h1 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
                                 System Overview

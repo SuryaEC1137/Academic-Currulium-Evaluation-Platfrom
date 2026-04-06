@@ -9,7 +9,6 @@ import {
     ShieldCheckIcon,
     AcademicCapIcon,
     UserGroupIcon,
-    BoltIcon,
     KeyIcon,
     XMarkIcon,
     LockClosedIcon,
@@ -282,7 +281,7 @@ const AdminProfileCard = ({ user, stats }) => {
                                             <p className="text-[14px] font-black text-slate-900 dark:text-slate-100 tracking-tight">Change Command Pulse</p>
                                         </div>
                                     </div>
-                                    <BoltIcon className="w-5 h-5 text-indigo-400 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all" />
+                                    <AcademicCapIcon className="w-5 h-5 text-indigo-400 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all" />
                                 </button>
                             </div>
                         </div>
