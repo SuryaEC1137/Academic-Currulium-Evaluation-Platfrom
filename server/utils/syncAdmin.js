@@ -22,11 +22,17 @@ const syncAdmin = async () => {
             });
             console.log('[Startup] Admin created successfully in ADMINS collection.');
         } else {
-            console.log('[Startup] Admin found in ADMINS collection. Syncing...');
-            user.password = password;
-            user.name = 'Administrator';
-            await user.save();
-            console.log('[Startup] Admin credentials synced.');
+            // Only update if password or name has changed
+            const isMatch = await user.matchPassword(password);
+            if (!isMatch || user.name !== 'Administrator') {
+                console.log('[Startup] Admin credentials out of sync. Updating...');
+                user.password = password;
+                user.name = 'Administrator';
+                await user.save();
+                console.log('[Startup] Admin credentials updated.');
+            } else {
+                console.log('[Startup] Admin credentials verified (Up to date).');
+            }
         }
 
     } catch (error) {
