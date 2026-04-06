@@ -1,9 +1,10 @@
 // Centralized API Configuration
-// Centralized API Configuration
-// In production, use the Render backend URL.
+// In production, use the Render backend URL provided by the user.
 // In dev, use localhost:5000.
-// VITE_API_BASE_URL can still be used to override this behavior.
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'; // Standardized to local for development and local deployment
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
+    (import.meta.env.MODE === 'production' 
+        ? 'https://academic-currulium-evaluation-platfrom.onrender.com' 
+        : 'http://localhost:5000');
 
 export const API_ENDPOINTS = {
     // Auth

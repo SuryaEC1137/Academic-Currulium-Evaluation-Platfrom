@@ -30,8 +30,10 @@ app.use(express.json());
 const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://student-difficulty-course-analyzer-2.onrender.com', // Frontend/Backend link provided
+    'https://academic-curriculum-evaluation.netlify.app',
+    'https://student-difficulty-course-analyzer-2.onrender.com', // Previous URLs
     'https://student-difficulty-course-analyzer.onrender.com',
+    'https://academic-currulium-evaluation-platfrom.onrender.com',
     process.env.FRONTEND_URL // Dynamic frontend URL (e.g. from Netlify)
 ].filter(Boolean);
 
