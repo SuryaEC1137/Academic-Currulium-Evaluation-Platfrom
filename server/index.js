@@ -30,11 +30,10 @@ app.use(express.json());
 const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:5174',
+    'https://transcendent-kulfi-4c0236.netlify.app',
     'https://academic-curriculum-evaluation.netlify.app',
-    'https://student-difficulty-course-analyzer-2.onrender.com', // Previous URLs
-    'https://student-difficulty-course-analyzer.onrender.com',
-    'https://academic-currulium-evaluation-platfrom.onrender.com',
-    process.env.FRONTEND_URL // Dynamic frontend URL (e.g. from Netlify)
+    'https://academic-currulium-evaluation-platfrom.onrender.com', // Self-reference for monorepo cases
+    process.env.FRONTEND_URL // Dynamic frontend URL
 ].filter(Boolean);
 
 app.use(cors({
@@ -214,7 +213,7 @@ app.use((req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = parseInt(process.env.PORT, 10) || 5000;
 const server = app.listen(PORT, () => {
     const startupMsg = `[${new Date().toISOString()}] 🚀 SERVER RESTART: ${process.pid} - UNIQUE_ID: ${Date.now()}\n`;
     try { fs.appendFileSync(path.join(__dirname, 'server_access.log'), startupMsg); } catch (e) { }
