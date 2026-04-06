@@ -57,72 +57,10 @@ app.use((req, res, next) => {
     next();
 });
 
-// Serve static files from the React app
-const distPath = path.resolve(__dirname, '../client/dist');
-console.log(`[Server] --- DEPLOYMENT DIAGNOSTICS ---`);
-console.log(`[Server] Current Dir (__dirname): ${__dirname}`);
-console.log(`[Server] Searching for client/dist at: ${distPath}`);
-
-if (fs.existsSync(distPath)) {
-    console.log(`[Server] ✅ FOUND client/dist. Contents:`, fs.readdirSync(distPath));
-} else {
-    console.error(`[Server] ❌ MISSING client/dist!`);
-    try {
-        const parentPath = path.resolve(__dirname, '..');
-        console.log(`[Server] Parent directory (${parentPath}) contents:`, fs.readdirSync(parentPath));
-        const clientPath = path.resolve(__dirname, '../client');
-        if (fs.existsSync(clientPath)) {
-            console.log(`[Server] Client directory (${clientPath}) contents:`, fs.readdirSync(clientPath));
-        }
-    } catch (err) {
-        console.error(`[Server] Path listing failed:`, err.message);
-    }
-}
-
-app.use(express.static(distPath));
-
-// API Status Check
-app.get('/api/status', (req, res) => {
-    res.json({
-        message: 'Student Analyzer API is running...',
-        version: '2.1.1-diagnostic',
-        timestamp: new Date().toISOString()
-    });
-});
-
-
-
-// Temporary Route Debugger
-app.get('/api/debug-routes', (req, res) => {
-    const routes = [];
-    app._router.stack.forEach(middleware => {
-        if (middleware.route) {
-            routes.push(`${Object.keys(middleware.route.methods).join(',').toUpperCase()} ${middleware.route.path}`);
-        } else if (middleware.name === 'router') {
-            const base = middleware.regexp.toString().replace('/^\\', '').replace('\\/?(?=\\/|$)/i', '');
-            middleware.handle.stack.forEach(handler => {
-                if (handler.route) {
-                    routes.push(`${Object.keys(handler.route.methods).join(',').toUpperCase()} ${base}${handler.route.path}`);
-                }
-            });
-        }
-    });
-    res.json({
-        total: routes.length,
-        routes: routes.sort()
-    });
-});
-
-app.get('/api/ping', (req, res) => res.send('pong'));
-
+// --- API ROUTES ---
 console.log('[Server] Registering routes...');
-
-// Direct Route removed - handled by authRoutes
-
 const { protect, admin } = require('./middleware/authMiddleware');
 const { resetPassword } = require('./controllers/authController');
-
-// Direct Auth routes handled by authRoutes.js
 
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/courses', require('./routes/courseRoutes'));
@@ -141,6 +79,21 @@ app.use('/api/faculty', require('./routes/facultyRoutes'));
 // General Requests
 app.use('/api/requests', require('./routes/requestRoutes'));
 app.use('/api/student', require('./routes/studentRoutes')); // Student Routes
+
+// --- STATIC FILES & DIAGNOSTICS ---
+// Serve static files from the React app
+const distPath = path.resolve(__dirname, '../client/dist');
+console.log(`[Server] --- DEPLOYMENT DIAGNOSTICS ---`);
+console.log(`[Server] Current Dir (__dirname): ${__dirname}`);
+console.log(`[Server] Searching for client/dist at: ${distPath}`);
+
+if (fs.existsSync(distPath)) {
+    console.log(`[Server] ✅ FOUND client/dist. Contents:`, fs.readdirSync(distPath));
+} else {
+    console.error(`[Server] ❌ MISSING client/dist!`);
+}
+
+app.use(express.static(distPath));
 console.log('[Server] Route registration complete.');
 
 // --- SECURE ASSET VAULT (Static Files) ---
